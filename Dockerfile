@@ -1,4 +1,3 @@
-
 FROM python:3.10.8-slim-buster
 
 # Install dependencies
@@ -14,11 +13,14 @@ WORKDIR /app/
 # Create and activate a virtual environment
 RUN python3 -m venv /app/venv
 
+# Upgrade pip inside the virtual environment
+RUN /app/venv/bin/pip install --upgrade pip
+
 # Install Python dependencies in the virtual environment
 RUN /app/venv/bin/pip install --no-cache-dir --upgrade -r Installer
 
 # Set environment variables for the virtual environment
 ENV PATH="/app/venv/bin:$PATH"
 
-# Run the application using gunicorn and Python script
+# Run the application using gunicorn and the main Python script
 CMD gunicorn app:app & python3 modules/main.py
