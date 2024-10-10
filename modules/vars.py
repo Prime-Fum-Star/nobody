@@ -2,8 +2,8 @@
 # Add your details here and then deploy by clicking on HEROKU Deploy button
 import os
 
-API_ID    = os.environ.get("API_ID", "16253557")
-API_HASH  = os.environ.get("API_HASH", "81171c25e4cb9062cb10da8b7730432a")
+API_ID    = os.environ.get("API_ID", "22801364")
+API_HASH  = os.environ.get("API_HASH", "38fd13fcb81f612aa703fa63d7dffec8")
 BOT_TOKEN = os.environ.get("BOT_TOKEN", "") 
 
 #WEBHOOK = True  # Don't change this
