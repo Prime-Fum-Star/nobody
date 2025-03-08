@@ -227,8 +227,8 @@ async def account_login(bot: Client, m: Message):
 
             try:  
 
-                cc = f'**[ 🎥 ] Vid_ID:** {str(count).zfill(3)}.** {𝗻𝗮𝗺𝗲𝟭}{MR}.mkv\n✉️ 𝐁𝐚𝐭𝐜𝐡 » **{raw_text0}**'
-                cc1 = f'**[ 📁 ] Pdf_ID:** {str(count).zfill(3)}. {𝗻𝗮𝗺𝗲𝟭}{MR}.pdf \n✉️ 𝐁𝐚𝐭𝐜𝐡 » **{raw_text0}**'
+                cc = f'**[📽️] 𝗩𝗶𝗱_𝗜𝗱 :** {str(count).zfill(3)}.**\n\n**☘️ 𝗧𝗶𝘁𝗹𝗲 𝗡𝗮𝗺𝗲** ➤ {name1}.({res}).mkv**\n\n**<pre><code>📚𝗕𝗮𝘁𝗰𝗵 𝗡𝗮𝗺𝗲** ➤ **{raw_text0}</code></pre>**\n\n**📥 𝐄xᴛʀᴀᴄᴛᴇᴅ 𝐁ʏ** ➤ **`{raw_text3}`**' 
+                cc1 = f'**[📁] 𝗣𝗱𝗳_𝗜𝗱 :** {str(count).zfill(3)}.**\n\n**☘️ 𝗧𝗶𝘁𝗹𝗲 𝗡𝗮𝗺𝗲** ➤ {name1}.pdf**\n\n**<pre><code>📚𝗕𝗮𝘁𝗰𝗵 𝗡𝗮𝗺𝗲** ➤ **{raw_text0}</code></pre>**\n\n**📥 𝐄xᴛʀᴀᴄᴛᴇᴅ 𝐁ʏ** ➤ **`{raw_text3}`**'
                 if "drive" in url:
                     try:
                         ka = await helper.download(url, name)
@@ -254,7 +254,7 @@ async def account_login(bot: Client, m: Message):
                         time.sleep(e.x)
                         continue
                 else:
-                    Show = f"❊⟱ 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐢𝐧𝐠 ⟱❊ »\n\n📝 𝐍𝐚𝐦𝐞 » `{name}\n⌨ 𝐐𝐮𝐥𝐢𝐭𝐲 » {raw_text2}`\n\n**🔗 𝐔𝐑𝐋 »** `{url}`"
+                    Show = f"**🔔 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗜𝗡𝗚 🔔**\n\n**📝 ɴᴀᴍᴇ » **`{name}`\n\n❄ ǫᴜᴀʟɪᴛʏ » `{res}`\n\n**🔗 ᴜʀʟ »** `{url}`\n\n🤖 𝗕𝗢𝗧 𝗠𝗔𝗗𝗘 𝗕𝗬 ➤ `𝐌𝐨𝐡𝐚𝐦𝐦𝐚𝐝 𝐒𝐚𝐥𝐢𝐦`"
                     prog = await m.reply_text(Show)
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
