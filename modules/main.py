@@ -71,14 +71,13 @@ async def main():
 @bot.on_message(filters.command(["start"]))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text(
-       f"𝐇𝐞𝐥𝐥𝐨 ❤️\n\n \n\n❈ I Am A Bot For Download Links From Your **.TXT** File And Then Upload That File Om Telegram So Basically If You Want To Use Me First Send Me ⟰ /salim Command And Then Follow Few Steps..", reply_markup=InlineKeyboardMarkup(
+       f"𝐇𝐞𝐥𝐥𝐨 {m.from_user.first_name} ❤️\n\n"  # यहां सिर्फ 1 \n\n है
+       "ɪ ᴀᴍ ᴛxᴛ ᴛᴏ ᴠɪᴅᴇᴏ ᴜᴘʟᴏᴀᴅᴇʀ ʙᴏᴛ.\n\n❈ ғᴏʀ ᴜsᴇ ᴍᴇ sᴇɴᴅ /salim", 
+       reply_markup=InlineKeyboardMarkup(
             [
-                [
-                    InlineKeyboardButton("✜ 😁 ✜" ,url=f"http://t.me/Contact_me_bybot") ],
-                    [
-                    InlineKeyboardButton("✜ Hello 👋✜" ,url="http://t.me/Contact_me_bybot") ],
-                    [
-                    InlineKeyboardButton("🦋 𝐌𝐞 🦋" ,url="http://t.me/Contact_me_bybot") ]                               
+                [  # सिर्फ 1 बटन
+                    InlineKeyboardButton("🦋 𝐌𝐞 🦋", url="http://t.me/NovaVirtuoso") 
+                ]                               
             ]))
 
 
